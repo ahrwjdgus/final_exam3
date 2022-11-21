@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -9,19 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>shop_flow</artifactId>
+	<artifactId>final_exam</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shop_flow</name>
-	<description>shop_flowproject for Spring Boot</description>
+	<name>final_exam</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
-		<!--main 함수가 있는 class 경로-->
-		<start-class>kr.hull.shop.ShopApplication</start-class>
-		<webapp.lib>${basedir}/src/lib</webapp.lib>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -58,8 +51,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
 
 		<!--thymeleaf 레이아웃 의존성 추가-->
 		<dependency>
