@@ -1,4 +1,6 @@
 package com.example.final_exam.constant;
 
-public class Role {
+public enum Role {
+    USER, ADMIN
 }
+
