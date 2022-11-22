@@ -9,12 +9,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
+import java.time.LocalDate;
 
 @Service
 @RequiredArgsConstructor
 public class BoardService {
     private final BoardRepository boardRepository;
+
+
+
     public void write(Board board, MultipartFile file) throws Exception{
         String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
 
@@ -22,6 +27,11 @@ public class BoardService {
         String fileName = uuid + "_" + file.getOriginalFilename();
         File saveFile = new File(projectPath, fileName);
 
+        LocalDate now = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        String date_now = now.format(formatter);
+
+        board.setDate(date_now);
         file.transferTo(saveFile);
         board.setFilename(fileName);
         board.setFilepath("/files/"+fileName);

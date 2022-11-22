@@ -15,7 +15,7 @@ public class SecurityConfig {
     // Spring Security 5.7.0-M2 부터 기존 WebSecurityConfigureAdapter 방식에서 SecurityFilterChain 으로 변경 권장
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        //http.csrf().disable();
+        http.csrf().disable();
         // 인증이 필요한 요청폼 설정 -> 그냥 정석임
         http.formLogin()
                 .loginPage("/members/login")
@@ -29,7 +29,7 @@ public class SecurityConfig {
         ;
 
         http.authorizeRequests()
-                .mvcMatchers("/css/**","/images/**").permitAll()
+                .mvcMatchers("/css/**","/images/**","/files/**").permitAll()
                 .mvcMatchers("/", "/members/**", "/board/**,/info/**").permitAll()
                 .mvcMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated() //admin만 /admi 주소로 갈수있게

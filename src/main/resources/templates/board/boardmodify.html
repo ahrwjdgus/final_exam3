@@ -28,14 +28,21 @@
 <body>
 <div layout:fragment="article">
     <div class="board">
-        <form th:action="@{/board/update/{id}(id=${board.id})}" method="post">
-            <input name="title" type="text" th:value="${board.title}">
-            <textarea name="content" th:text="${board.content}"></textarea>
-            <button type="submit">수정</button>
-        </form>
+        <div>
+            <form action="/board/boardsave" method="post" enctype="multipart/form-data">
+                <label>제목</label>
+                <input class = "input_title" name="title" type="text">
+                <br />
+                <label>내용</label>
+                <textarea class = "input_content" name="content"></textarea>
+                <br />
+                <input type="file" name="file">
+                <br />
+                <button type="submit" th:class="text_center">수정</button>
+            </form>
+        </div>
     </div>
-
-    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 </div>
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 </body>
 </html>

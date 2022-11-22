@@ -33,10 +33,6 @@ body {
     display: flex;
     margin-top: 20px;
 }
-.login {
-    text-align: right;
-    padding-top: 10px;
-}
 .header_text {
     font-size: 50px;
     margin: auto;
@@ -92,11 +88,88 @@ ul li:hover a {
 
 .footer {
     width: 100%;
+    margin-top: 40px;
     padding: 15px 0;
     text-align: center;
-    background-color: blue;
+    background-color: white;
 }
 
 .text_center {
     text-align: center;
+}
+
+/*게시판 베너*/
+article .banner {
+    width: 380px;
+    margin: 10px auto;
+}
+.board_title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+.board_title > a {
+    width: 40px;
+    height: 20px;
+    font-size: 15px;
+    border: black solid 1px;
+    border-radius: 10px;
+    padding: 0 5px;
+    background-color: #34347e;
+    color: #ddd;
+    text-align: center;
+}
+.board_list > div {
+    border-bottom: #ddd solid 1px;
+}
+.board_list > div > div {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 1.2rem;
+}
+.board_list .board_list_top {
+    padding: 5px 0;
+    text-align: center;
+    border-top: rgb(133, 131, 131) solid 2px;
+}
+.board_list .title {
+    width: 70%;
+}
+.board_list .date {
+    width: 20%;
+}
+.btn {
+    width: 80px;
+    height: 20px;
+    font-size: 15px;
+    border: black solid 1px;
+    border-radius: 100px;
+    padding: 0 5px;
+    background-color: #34347e;
+    color: #ddd;
+    text-align: center;
+}
+
+.btn2 {
+    width: 60px;
+    height: 15px;
+    font-size: 13px;
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #e1e1e7;
+    color: black;
+    text-align: center;
+}
+
+.input_title{
+    width: 90%;
+    height: auto;
+}
+
+.input_content{
+    width: 90%;
+    height: 300px;
 }

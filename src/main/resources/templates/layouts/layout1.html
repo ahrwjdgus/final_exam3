@@ -19,14 +19,14 @@
     <th:block layout:fragment="css"></th:block>
 </head>
 <body>
+
 <div th:replace="fragments/header::header"></div>
 
 <span>
-    <div ><a href="/members/new">회원가입</a></div>
-    <div ><a href="/members/login">로그인</a></div>
-    <div sec:authorize="isAuthenticated()"><a href="/members/logout">로그아웃</a></div>
+    <a class="btn2" sec:authorize="isAnonymous()" href="/members/login">로그인</a>
+    <a class="btn2" sec:authorize="isAuthenticated()" href="/members/logout">로그아웃</a>
+</span>
 
-  </span>
 <div class="wrapper">
     <div th:replace="fragments/aside::aside"></div>
     <div layout:fragment="article" class="article"> </div>
