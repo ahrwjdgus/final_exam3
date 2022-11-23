@@ -3,25 +3,6 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout1}">
 
-<style>
-  .board{
-    width: 500px;
-    margin:0 auto;
-    margin-top: 40px;
-  }
-
-  .board input {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .board textarea{
-    width: 100%;
-    min-height: 300px;
-    margin-top: 10px;
-  }
-</style>
-
 <div layout:fragment="article">
   <div class="board">
     <div>
@@ -34,7 +15,7 @@
         <br />
         <input type="file" name="file">
         <br />
-        <button type="submit" th:class="text_center">작성</button>
+        <button type="submit">작성</button>
       </form>
     </div>
   </div>

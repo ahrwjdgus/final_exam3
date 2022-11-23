@@ -173,3 +173,19 @@ article .banner {
     width: 90%;
     height: 300px;
 }
+
+.board{
+    width: 500px;
+    margin-top: 40px;
+}
+
+.board input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.board textarea{
+    width: 100%;
+    min-height: 300px;
+    margin-top: 10px;
+}
