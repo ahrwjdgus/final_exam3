@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/board")
 @RequiredArgsConstructor
 public class BoardController {
-
     private final BoardService boardService;
     @GetMapping(value = "/write")
     public String boardWriteForm(Model model){

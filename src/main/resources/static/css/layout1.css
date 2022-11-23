@@ -189,3 +189,27 @@ article .banner {
     min-height: 300px;
     margin-top: 10px;
 }
+
+.reply {
+    margin-top: 40px;
+}
+
+.reply_input {
+    border: 2px solid black;
+    width: 630px;
+    height: 70px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.formtag {
+    display: inline-block;
+}
+
+.btn_reply {
+    width: 70px;
+    height: 60px;
+    background-color: #34347e;
+    color: aliceblue;
+    border-radius: 5px;
+}
