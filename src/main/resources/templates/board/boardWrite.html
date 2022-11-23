@@ -2,10 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout1}">
-<head>
-  <meta charset="UTF-8">
-  <title>게시물 작성폼</title>
-</head>
 
 <style>
   .board{
@@ -25,7 +21,7 @@
     margin-top: 10px;
   }
 </style>
-<body>
+
 <div layout:fragment="article">
   <div class="board">
     <div>
@@ -43,6 +39,5 @@
     </div>
   </div>
 </div>
-<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-</body>
+
 </html>

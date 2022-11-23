@@ -29,8 +29,8 @@ public class SecurityConfig {
         ;
 
         http.authorizeRequests()
-                .mvcMatchers("/css/**","/images/**","/files/**").permitAll()
-                .mvcMatchers("/", "/members/**", "/board/**,/info/**").permitAll()
+                .mvcMatchers("/css/**","/images/**").permitAll()
+                .mvcMatchers("/", "/members/**", "/board/**","/info/**").permitAll()
                 .mvcMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated() //admin만 /admi 주소로 갈수있게
         ;

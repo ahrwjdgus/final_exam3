@@ -30,8 +30,8 @@ public class BoardService {
         LocalDate now = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         String date_now = now.format(formatter);
-
         board.setDate(date_now);
+
         file.transferTo(saveFile);
         board.setFilename(fileName);
         board.setFilepath("/files/"+fileName);

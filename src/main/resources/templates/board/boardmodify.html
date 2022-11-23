@@ -29,7 +29,7 @@
 <div layout:fragment="article">
     <div class="board">
         <div>
-            <form action="/board/boardsave" method="post" enctype="multipart/form-data">
+            <form th:action="@{/board/update/{id}(id=${board.id})}"  method="post" enctype="multipart/form-data">
                 <label>제목</label>
                 <input class = "input_title" name="title" type="text">
                 <br />
@@ -43,6 +43,5 @@
         </div>
     </div>
 </div>
-<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 </body>
 </html>

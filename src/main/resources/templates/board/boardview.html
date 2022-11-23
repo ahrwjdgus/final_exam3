@@ -14,7 +14,7 @@
               <a class="btn" th:href="@{/board/delete(id=${board.id})}">삭제</a>
               <a class="btn" th:href="@{${board.getFilepath()}}">사진보기</a>
                 <!-- <a class="btn" th:href="@{/files/b10e3094-6a3d-4da9-a4fe-4824af689a1f_giraffe.png}">사진보기</a> -->
-            </span>3
+            </span>
         </div>
         <div class="board_list">
             <div class="board_list_top">
@@ -23,11 +23,6 @@
             <p th:text="${board.content}">내용이 들어갈 부분</p>
         </div>
     </div>
-
-
-
-
-
 
 </div>
 
